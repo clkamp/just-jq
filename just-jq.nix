@@ -39,6 +39,7 @@ resholve.mkDerivation rec {
   };
 
   meta = with lib; {
+    description = "A collection of tools for handling json for just";
     license = licenses.bsd2;
   };
 }
