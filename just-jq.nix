@@ -16,7 +16,7 @@ resholve.mkDerivation rec {
 
   cfmtjson = fetchurl {
       url = "https://www.linta.de/~aehlig/techblog/attach-2021-10-10-bsd.py";
-      sha256 = "sha256-ytSGQxVJhVrU5dnaA2Fcex3BylYVdLY1U0YKF8pv65Y=";
+      sha256 = "sha256-n4U4ScaXwfcpLLSsqobQ+xO1tDBjCpolKk6PWQvsQZ8=";
     };
 
   buildInputs = [ python3 ];
