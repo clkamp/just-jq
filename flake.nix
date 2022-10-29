@@ -8,10 +8,10 @@
   outputs = { self, flake-utils, nixpkgs }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackags.${system};
+        pkgs = nixpkgs.legacyPackages.${system};
       in
       rec {
         defaultPackage = pkgs.callPackage ./just-jq.nix {};
       }
-    };
+    );
 }
