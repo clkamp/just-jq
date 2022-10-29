@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ -n "${1}" -a -d "${1}" ]
+then
+  TARGETS="${1}/${2:-TARGETS}"
+else
+  TARGETS="${1:-TARGETS}"
+fi
+
+if [ -e ${TARGETS} ]
+then
+  touch ${TARGETS}
+else
+  echo '{}' > ${TARGETS}
+fi

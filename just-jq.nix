@@ -2,6 +2,7 @@
 , resholve
 , bash
 , jq
+, coreutils
 , moreutils
 , python3
 , lib
@@ -28,13 +29,14 @@ resholve.mkDerivation rec {
     install -D $cfmtjson $out/bin/cfmtjson
     chmod +x $out/bin/cfmtjson
     install -D jqi $out/bin/jqi
+    install -D toucht $out/bin/toucht
   '';
 
   solutions = {
     default = {
-      scripts = [ "bin/jqi" ];
+      scripts = [ "bin/jqi" "bin/toucht" ];
       interpreter = "${bash}/bin/bash";
-      inputs = [ moreutils jq "bin" ];
+      inputs = [ coreutils moreutils jq "bin" ];
     };
   };
 
